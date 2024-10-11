@@ -104,7 +104,7 @@ dev = [
   "parameterized >=0.8, <0.9",
   #"pprofile",
   "pyautogui",
-  "pyopencl; platform_machine != 'aarch64'", # broken on arm64
+  "pyopencl==2024.1", # later versions cause kernel error on linux aarch64
   "pytools < 2024.1.11; platform_machine != 'aarch64'", # pyopencl use a broken version
   "pywinctl",
   "pyprof2calltree",
@@ -117,7 +117,7 @@ dev = [
 ]
 
 tools = [
-  "metadrive-simulator @ https://github.com/commaai/metadrive/releases/download/MetaDrive-minimal/metadrive_simulator-0.4.2.3-py3-none-any.whl ; (platform_machine != 'aarch64')",
+  "metadrive-simulator @ https://github.com/commaai/metadrive/releases/download/MetaDrive-minimal/metadrive_simulator-0.4.2.3-py3-none-any.whl",
   "rerun-sdk >= 0.18",
 ]
 
